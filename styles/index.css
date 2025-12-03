@@ -1,0 +1,279 @@
+/* General resets */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variables declaration */
+:root {
+  --caveat-r: 400 16px "Caveat";
+  --caveat-m: 500 16px "Caveat";
+  --caveat-sb: 600 16px "Caveat";
+  --caveat-b: 700 16px "Caveat";
+}
+
+/* Sheet style */
+#main-container {
+  max-width: 80%;
+  margin-top: 5rem;
+  margin: 3rem auto;
+  border: 3px solid #000;
+}
+
+/* Navigation bar */
+nav {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile img {
+  border-radius: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+.profile p {
+  font: var(--caveat-b);
+  font-size: 26px;
+}
+
+nav .nav-links {
+  align-content: center;
+  font: var(--caveat-b);
+  font-size: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Header customization */
+header {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font: var(--caveat-b);
+  font-size: 8vw;
+}
+
+header p {
+  font: var(--caveat-r);
+  margin: 0 0 5rem 0;
+  font-size: 4vw;
+  opacity: 0.6;
+}
+
+/* Main section */
+main {
+  display: flex;
+}
+
+main article {
+  padding: 0 0 1rem 1rem;
+}
+
+main article:first-of-type {
+  border-bottom: 3px solid;
+}
+
+main h3 {
+  font: var(--caveat-b);
+  font-size: 25px;
+  margin: 1rem;
+}
+
+main h4 {
+  font: var(--caveat-b);
+  font-size: 25px;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+}
+
+.project-container {
+  border-right: 3px solid;
+  width: 30%;
+}
+
+.project-container article {
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 2px solid;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.project-container article:last-child {
+  border-bottom: none;
+}
+
+.work-container {
+  width: 40%;
+  border-right: 3px solid;
+}
+
+.work-container p {
+  margin: 0 0 0.5rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+}
+
+.work-container a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.education-container {
+  width: 30%;
+}
+
+.education-container p {
+  font-family: Arial;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.education-container ul {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.education-container ul li {
+  font-family: arial;
+  font-size: 12px;
+  margin: 0 1rem 0.5rem 1rem;
+}
+
+/* Footer section */
+footer {
+  border-top: 3px solid;
+}
+
+footer h3 {
+  margin: 1rem 0 1rem 1rem;
+  font: var(--caveat-b);
+  font-size: 28px;
+}
+
+#teachers-reviews {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0 1rem 5rem 1rem;
+}
+
+.review {
+  border: 3px solid;
+  border-radius: 30px;
+  width: 30%;
+  padding: 1rem;
+}
+
+.review p:first-of-type {
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 1;
+  margin-bottom: 0.5rem;
+}
+
+.review p {
+  margin: 0;
+  font-family: Arial;
+  opacity: 0.5;
+}
+
+footer h4 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font: var(--caveat-b);
+  font-size: 5vw;
+}
+
+@media (max-width: 600px) {
+  #main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile {
+    flex-direction: column;
+  }
+  header {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  main {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 100%;
+    border-right: none;
+    text-align: center;
+    border-bottom: 3px solid;
+  }
+
+  .project-container article:first-of-type {
+    border-top: 3px solid;
+  }
+
+  .project-container article {
+    background-color: darkgray;
+  }
+
+  .work-container {
+    width: 100%;
+    border-right: none;
+    border-bottom: 3px solid;
+  }
+
+  .work-container h3 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .work-container article:first-of-type {
+    border-top: 3px solid;
+  }
+
+  .work-container article {
+    background-color: darkgray;
+    padding: 2rem 1rem;
+  }
+
+  .education-container {
+    width: 100%;
+    border-right: none;
+    border-bottom: 3px solid;
+  }
+
+  #teachers-reviews {
+    flex-direction: column;
+  }
+
+  #teachers-reviews .review {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    border: none;
+  }
+}
